@@ -8,6 +8,9 @@ function allReportsComponent() {
     .then((data) => {
       reportList.innerHTML = "";
       data.forEach((problem) => {
+        const disableSelect =
+          problem.data().status === "Concluído" ? "disabled" : "";
+
         return (reportList.innerHTML += `
             <div class="report">
               <div>
@@ -15,9 +18,9 @@ function allReportsComponent() {
                   <p>Local: ${problem.data().location}</p>
                   <p>Descrição: ${problem.data().description}</p>
                   <label for="status">Status: </label>
-                  <select name="status" id="${
-                    problem.id
-                  }" onchange="changeStatus(this.id, this.value)">
+                  <select ${disableSelect} name="status" id="${
+          problem.id
+        }" onchange="changeStatus(this.id, this.value)">
                      <option value="" disabled selected>Selecione um status</option>
                      <option value="Aberto">Aberto</option>
                      <option value="Em análise">Em análise</option>
