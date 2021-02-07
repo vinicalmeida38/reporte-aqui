@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    <script src="/scripts/env.js"></script>
+    <title>ReporteAqui | Cadastrar-se</title>
+</head>
+
+<body>
+    <header>
+        <a class="back__button--content" href="/">
+            <button class="back__button">Voltar</button>
+        </a>
+    </header>
+    <section>
+        <fieldset class="form">
+            <form class="form__container">
+                <h1 class="form__container--title">Cadastrar-se</h1>
+                <label class="form__container--label" for="email">E-mail</label>
+                <input class="form__container--input" type="email" name="user" id="email-register">
+                <label class="form__container--label" for="password">Senha</label>
+                <input class="form__container--input" type="password" name="password" id="password-register">
+                <label class="form__container--label" for="confirm-password">Confirme a senha</label>
+                <input class="form__container--input" type="password" name="confirm-password"
+                    id="confirm-password-register">
+                <button class="form__container--btn" type="submit" onclick="createUser(event);">Cadastrar</button>
+            </form>
+        </fieldset>
+    </section>
+
+    <script src="/scripts/auth.js"></script>
+</body>
+
+</html>

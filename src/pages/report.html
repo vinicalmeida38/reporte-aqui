@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script src="scripts/env.js"></script>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    <title>Reporte Aqui</title>
+</head>
+
+<body>
+    <header class="header"></header>
+    <section>
+        <a class="back__button--content" href="/portal-citizen">
+            <button class="back__button">Voltar</button>
+        </a>
+    </section>
+    <section>
+        <fieldset class="form">
+            <form class="form__container">
+                <h1 class="form__container--title">Relatar problema</h1>
+                <label class="form__container--label" for="title-report">Título</label>
+                <input class="form__container--input" type="text" name="title-report" id="title-report">
+                <label class="form__container--label" for="location-report">Local</label>
+                <input class="form__container--input" type="location-report" name="location-report" id="location-report"
+                    maxlength="100" required>
+                <label class="form__container--label" for="evidence-report">Link da Imagem</label>
+                <input class="form__container--input" type="text" name="evicence-report" id="evidence-report">
+                <label class="form__container--label" for="description-report">Descrição</label>
+                <textarea name="description" id="description-report" cols="30" rows="10" maxlength="500"></textarea>
+                <button class="form__container--btn" type="submit" onclick="registerProblem(event);">Enviar</button>
+            </form>
+        </fieldset>
+    </section>
+
+    <script src="/scripts/report.js"></script>
+    <script src="/components/header.js"></script>
+</body>
+
+</html>

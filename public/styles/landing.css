@@ -1,0 +1,40 @@
+.landing,
+.landing__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing__container {
+  flex-direction: column;
+  margin-top: 170px;
+}
+
+.landing__title {
+  font-size: 96px;
+  text-shadow: 8px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.landing__subtitle {
+  font-size: 24px;
+  word-wrap: break-word;
+  width: 400px;
+  text-align: center;
+}
+
+.landing__btn {
+  width: 422px;
+  height: 59px;
+  color: #ffffff;
+  background-color: #000000;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.landing__btn:hover {
+  background-color: #4b4b4b;
+}
+
+.link + .link {
+  margin: 15px;
+}

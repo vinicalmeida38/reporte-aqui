@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    <script src="/scripts/env.js"></script>
+    <title>ReporteAqui | Login</title>
+</head>
+
+<body>
+    <header>
+        <a class="back__button--content" href="/">
+            <button class="back__button">Voltar</button>
+        </a>
+
+    </header>
+    <section>
+        <fieldset class="form">
+            <form class="form__container">
+                <h1 class="form__container--title">Entrar</h1>
+                <label class="form__container--label" for="email">E-mail</label>
+                <input class="form__container--input" type="text" name="user" id="email-login">
+                <label class="form__container--label" for="password">Senha</label>
+                <input class="form__container--input" type="password" name="user" id="password-login">
+                <div class="form__container--radio">
+                    <input class="form__container--radio" type="radio" name="user-page" id="citizen-page"
+                        value="/portal-citizen" checked>
+                    <label class="form__container--label" for="public-servant">Cidadão</label>
+                </div>
+                <div class="form__container--radio">
+                    <input class="form__container--radio" type="radio" name="user-page" id="public-servant-page"
+                        value="/public-servant">
+                    <label class="form__container--label" for="public-servant">Servidor Público</label>
+                </div>
+                <button class="form__container--btn" type="submit" onclick="authUser(event);">Entrar</button>
+                <a class="forgot__button--content" href="/forgot-password">
+                    <button type="button" class="form__container--btn">Esqueci minha senha</button>
+                </a>
+            </form>
+        </fieldset>
+    </section>
+
+    <script src="/scripts/login.js"></script>
+</body>
+
+</html>
