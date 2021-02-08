@@ -40,4 +40,8 @@ server.get("/report", (req, res) => {
   return res.render("report.html");
 });
 
+server.get("/all-reports", (req, res) => {
+  return res.render("free-access.html");
+});
+
 server.listen(3000);

@@ -10,13 +10,15 @@ function reportsCitizenComponent() {
       data.forEach((problem) => {
         if (problem.data().id === userId) {
           return (reportList.innerHTML += `
-          <div class="report">
+          <div class="report">  
             <div>
                 <h2>${problem.data().title}</h2>
                 <p>Local: ${problem.data().location}</p>
                 <p>Descrição: ${problem.data().description}</p>
                 <label for="status">Status: </label>
-                <input type="text" disabled value="${problem.data().status}">
+                <input type="text" disabled value="${
+                  problem.data().status
+                }">          
             </div>
             <div>
                 <img src="${problem.data().evidence}" alt="${

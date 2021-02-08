@@ -6,7 +6,7 @@ function registerProblem(e) {
   const location = document.getElementById("location-report").value;
   const evidence = document.getElementById("evidence-report").value;
   const description = document.getElementById("description-report").value;
-  const status = "Aberto";
+  const status = "Cadastrado";
 
   console.log(title);
 
@@ -21,8 +21,9 @@ function registerProblem(e) {
     })
     .then(() => {
       alert("Relato enviado com sucesso!");
+      window.location.href = "/portal-citizen";
     })
-    .catch(function (error) {
-      alert("Houve um erro no envio do relato! Tente novamente.", error);
+    .catch(() => {
+      alert("Houve um erro no envio do relato! Tente novamente.");
     });
 }

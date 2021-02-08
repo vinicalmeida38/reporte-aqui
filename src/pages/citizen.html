@@ -15,10 +15,15 @@
 <body>
     <header class="header"></header>
     <section class="reports">
-        <h1 class="reports--title">Meus relatos</h1>
-        <a href="/report">
-            <button class="reports--add-btn">Cadastrar relato</button>
-        </a>
+        <div>
+            <h1 class="reports--title">Meus relatos</h1>
+        </div>
+        <div>
+            <a href="/report">
+                <button class="reports--add-btn">Cadastrar relato</button>
+            </a>
+            <button class="reports--add-btn" onclick="reportsCitizenComponent();">Atualizar</button>
+        </div>
     </section>
     <section class="reports__list"></section>
 

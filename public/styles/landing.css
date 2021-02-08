@@ -35,6 +35,6 @@
   background-color: #4b4b4b;
 }
 
-.link + .link {
-  margin: 15px;
+.link {
+  margin-top: 15px;
 }

@@ -9,19 +9,20 @@
     <script src="scripts/env.js"></script>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/citizen.css">
-    <title>ReporteAqui | Servidor Público</title>
+    <title>ReporteAqui | Relatos</title>
 </head>
 
 <body>
-    <header class="header"></header>
+    <header class="header">
+        <h1 class="header--title">ReporteAqui</h1>
+    </header>
     <section class="reports">
         <h1 class="reports--title">Relatos</h1>
-        <button class="reports--add-btn" onclick="allReportsComponent();">Atualizar</button>
+        <button class="reports--add-btn" onclick="allReportsFreeAccessComponent();">Atualizar</button>
     </section>
     <section class="reports__list"></section>
 
-    <script src="/components/header.js"></script>
-    <script src="/components/reports-public-servant.js"></script>
+    <script src="/components/reports-free-access.js"></script>
 </body>
 
 </html>
