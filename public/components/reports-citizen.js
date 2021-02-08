@@ -18,7 +18,11 @@ function reportsCitizenComponent() {
                 <label for="status">Status: </label>
                 <input type="text" disabled value="${
                   problem.data().status
-                }">          
+                }">    
+                <br>
+                <button class="report--remove-btn" type="button" onclick=removeReport("${
+                  problem.id
+                }")>Remover</button>        
             </div>
             <div>
                 <img src="${problem.data().evidence}" alt="${
@@ -36,3 +40,16 @@ function reportsCitizenComponent() {
 }
 
 reportsCitizenComponent();
+
+function removeReport(doc) {
+  db.collection("problems")
+    .doc(doc)
+    .delete()
+    .then(() => {
+      alert("Relato excluído com sucesso!");
+      reportsCitizenComponent();
+    })
+    .catch(() => {
+      alert("Houve um erro na remoção do relato! Tente novamente.");
+    });
+}

@@ -21,18 +21,19 @@
     </section>
     <section>
         <fieldset class="form">
-            <form class="form__container">
+            <form id="form" class="form__container">
                 <h1 class="form__container--title">Relatar problema</h1>
                 <label class="form__container--label" for="title-report">Título</label>
-                <input class="form__container--input" type="text" name="title-report" id="title-report">
+                <input class="form__container--input" type="text" name="title-report" id="title-report" required>
                 <label class="form__container--label" for="location-report">Local</label>
                 <input class="form__container--input" type="location-report" name="location-report" id="location-report"
                     maxlength="100" required>
                 <label class="form__container--label" for="evidence-report">Link da Imagem</label>
-                <input class="form__container--input" type="text" name="evicence-report" id="evidence-report">
+                <input class="form__container--input" type="text" name="evicence-report" id="evidence-report" required>
                 <label class="form__container--label" for="description-report">Descrição</label>
-                <textarea name="description" id="description-report" cols="30" rows="10" maxlength="500"></textarea>
-                <button class="form__container--btn" type="submit" onclick="registerProblem(event);">Enviar</button>
+                <textarea name="description" id="description-report" cols="30" rows="10" maxlength="500"
+                    required></textarea>
+                <button class="form__container--btn" type="submit">Enviar</button>
             </form>
         </fieldset>
     </section>

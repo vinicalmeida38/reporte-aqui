@@ -20,16 +20,16 @@
     </header>
     <section>
         <fieldset class="form">
-            <form class="form__container">
+            <form id="form" class="form__container">
                 <h1 class="form__container--title">Cadastrar-se</h1>
                 <label class="form__container--label" for="email">E-mail</label>
-                <input class="form__container--input" type="email" name="user" id="email-register">
+                <input class="form__container--input" type="email" name="user" id="email-register" required>
                 <label class="form__container--label" for="password">Senha</label>
-                <input class="form__container--input" type="password" name="password" id="password-register">
+                <input class="form__container--input" type="password" name="password" id="password-register" required>
                 <label class="form__container--label" for="confirm-password">Confirme a senha</label>
                 <input class="form__container--input" type="password" name="confirm-password"
-                    id="confirm-password-register">
-                <button class="form__container--btn" type="submit" onclick="createUser(event);">Cadastrar</button>
+                    id="confirm-password-register" required>
+                <button class="form__container--btn" type="submit">Cadastrar</button>
             </form>
         </fieldset>
     </section>

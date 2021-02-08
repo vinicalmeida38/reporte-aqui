@@ -1,4 +1,6 @@
-function registerProblem(e) {
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const userId = localStorage.getItem("userId");
@@ -7,8 +9,6 @@ function registerProblem(e) {
   const evidence = document.getElementById("evidence-report").value;
   const description = document.getElementById("description-report").value;
   const status = "Cadastrado";
-
-  console.log(title);
 
   db.collection("problems")
     .add({
@@ -26,4 +26,4 @@ function registerProblem(e) {
     .catch(() => {
       alert("Houve um erro no envio do relato! Tente novamente.");
     });
-}
+});

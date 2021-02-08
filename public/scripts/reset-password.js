@@ -1,4 +1,6 @@
-function resetPassword(e) {
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   const emailReset = document.getElementById("send-email").value;
 
@@ -11,7 +13,7 @@ function resetPassword(e) {
     .catch((err) => {
       alert(err.message);
     });
-}
+});
 
 function authFirebase() {
   return firebase.auth();

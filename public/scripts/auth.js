@@ -1,4 +1,6 @@
-function createUser(e) {
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.getElementById("email-register").value;
   const password = document.getElementById("password-register").value;
@@ -19,7 +21,7 @@ function createUser(e) {
   } else {
     alert("As senhas inseridas são diferentes!");
   }
-}
+});
 
 function authFirebase() {
   return firebase.auth();

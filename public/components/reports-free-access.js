@@ -11,12 +11,14 @@ function allReportsFreeAccessComponent() {
             <div class="report">  
               <div>
                   <h2>${problem.data().title}</h2>
-                  <p>Local: ${problem.data().location}</p>
-                  <p>Descrição: ${problem.data().description}</p>
-                  <label for="status">Status: </label>
+                  <p><strong>Local: </strong> ${problem.data().location}</p>
+                  <p><strong>Descrição: </strong>${
+                    problem.data().description
+                  }</p>
+                  <label for="status"><strong>Status: </strong></label>
                   <input type="text" disabled value="${
                     problem.data().status
-                  }">          
+                  }">         
               </div>
               <div>
                   <img src="${problem.data().evidence}" alt="${

@@ -1,4 +1,6 @@
-function authUser(e) {
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.getElementById("email-login").value;
   const password = document.getElementById("password-login").value;
@@ -15,7 +17,7 @@ function authUser(e) {
     .catch(() => {
       alert("E-mail ou senha incorretos!");
     });
-}
+});
 
 function sucessfullLogin(userId) {
   const citizenPage = document.getElementById("citizen-page");
